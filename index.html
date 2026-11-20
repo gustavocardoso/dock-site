@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191321">
+  <meta name="description" content="Make the macOS Dock your own with live widgets, five themes, and settings for each display.">
+  <title>Dock — A more personal Dock for Mac</title>
+  <link rel="icon" href="dock.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 24 24"><rect x="2" y="12" width="20" height="9" rx="3"/><path d="M7 16h.01M12 16h.01M17 16h.01M12 3v5M7 6l-2 2m12-2 2 2"/></symbol>
+    <symbol id="compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+    <symbol id="terminal" viewBox="0 0 24 24"><path d="m5 7 5 5-5 5m8 0h6"/></symbol>
+    <symbol id="music" viewBox="0 0 24 24"><path d="M9 17V6l10-2v11M9 17a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm10-2a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1 1m12 12 1 1M5 19l1-1M18 6l1-1"/></symbol>
+    <symbol id="calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4m8-4v4m-8 8h2m4 0h2"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m4 7 2 2 3-4m3 2h8M4 13l2 2 3-4m3 2h8m-8 6h8"/></symbol>
+    <symbol id="timer" viewBox="0 0 24 24"><circle cx="12" cy="14" r="7"/><path d="M12 7V3m-3 0h6m-3 11 3-3"/></symbol>
+    <symbol id="pulse" viewBox="0 0 24 24"><path d="M2 13h5l3-7 4 12 3-5h5"/></symbol>
+    <symbol id="home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8M6 9v11h12V9m-8 11v-6h4v6"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v13m-4-4 4 4 4-4M5 20h14"/></symbol>
+    <symbol id="trash" viewBox="0 0 24 24"><path d="M4 6h16M9 6V3h6v3m3 0-1 14H7L6 6m4 4v6m4-6v6"/></symbol>
+  </svg>
+  <header class="top wrap">
+    <a class="brand" href="#" aria-label="Dock home"><svg aria-hidden="true"><use href="#mark"/></svg> Dock<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#demo">Themes</a><a href="#widgets">Widgets</a><a class="nav-cta" href="#get-dock">Download <span aria-hidden="true">↓</span></a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="intro" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow"><span class="signal"></span> A MORE PERSONAL DOCK FOR MAC</p>
+        <h1 id="hero-title">Your Dock,<br><em>your way.</em></h1>
+      </div>
+      <div class="intro-aside">
+        <p>Your favorite apps, your next meeting, and a look of your own. A Dock for macOS that stays within reach and out of the way.</p>
+        <div class="intro-actions">
+          <a class="button" href="#get-dock">Get Dock for Mac <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#demo">Try the themes</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo" id="demo" aria-label="Interactive Dock preview" data-theme="graphite">
+      <div class="desktop">
+        <div class="menubar" aria-hidden="true"><span><strong>Dock</strong> &nbsp; Desktop preview</span><span>9:41 AM</span></div>
+        <svg class="wallpaper" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#292242"/><stop offset="1" stop-color="#a44d64"/></linearGradient>
+            <linearGradient id="sunset" x2="0" y2="1"><stop stop-color="#ffe2aa"/><stop offset="1" stop-color="#f18376"/></linearGradient>
+            <pattern id="grid" width="64" height="48" patternUnits="userSpaceOnUse"><path d="M64 0H0V48" fill="none" stroke="#f8d3e2" stroke-opacity=".15"/></pattern>
+            <clipPath id="disc"><circle cx="615" cy="256" r="168"/></clipPath>
+          </defs>
+          <path fill="url(#sky)" d="M0 0h1200v480H0z"/>
+          <path fill="url(#grid)" d="M0 0h1200v480H0z"/>
+          <circle cx="615" cy="256" r="188" fill="none" stroke="#ffd3b8" stroke-opacity=".28"/>
+          <circle cx="615" cy="256" r="168" fill="url(#sunset)"/>
+          <path d="M430 285h370m-370 15h370m-370 18h370m-370 22h370m-370 26h370" stroke="#8a4667" stroke-opacity=".48" clip-path="url(#disc)"/>
+          <path d="M0 374 107 351l94 22 124-64 75 29 89 9 105 93 131-68 126-8 115-80 95 39 139-37v194H0Z" fill="#57304f"/>
+          <path d="M0 401 121 433l95-11 138 31 137-49 90 23 119-48 103 47 128-17 143-43 126 36v78H0Z" fill="#35213d"/>
+          <path d="M0 457 140 448l112 22 121-15 162 25H0Zm1200-8-155-14-160 45h315Z" fill="#211829"/>
+          <g fill="#fbe0cd"><circle cx="214" cy="126" r="2"/><circle cx="946" cy="114" r="2"/><circle cx="826" cy="178" r="1.5"/><path d="M336 193h16m-8-8v16m659 41h12m-6-6v12" fill="none" stroke="#fbe0cd"/></g>
+        </svg>
+        <p class="desktop-caption">Hover over an app icon to see it magnify.</p>
+        <div class="rail" aria-label="App and widget preview" role="group">
+          <div class="apps" aria-label="Sample app icons" role="group">
+            <span class="app app-blue" role="img" aria-label="Browser" title="Browser"><svg><use href="#compass"/></svg></span>
+            <span class="app app-ink" role="img" aria-label="Terminal" title="Terminal"><svg><use href="#terminal"/></svg></span>
+            <span class="app app-pink" role="img" aria-label="Music" title="Music"><svg><use href="#music"/></svg></span>
+          </div>
+          <span class="divider"></span>
+          <div class="sample sample-weather"><svg aria-hidden="true"><use href="#sun"/></svg><div><small>WEATHER</small><strong>24°</strong></div></div>
+          <div class="sample sample-calendar"><svg aria-hidden="true"><use href="#calendar"/></svg><div><small>CALENDAR</small><strong>Today, 2 PM</strong></div></div>
+          <div class="sample sample-timer"><svg aria-hidden="true"><use href="#timer"/></svg><div><small>TIMER</small><strong>18:42</strong></div></div>
+          <span class="divider shortcuts"></span>
+          <div class="shortcuts" aria-hidden="true"><svg><use href="#home"/></svg><svg><use href="#download"/></svg><svg><use href="#trash"/></svg></div>
+        </div>
+      </div>
+      <div class="theme-console">
+        <div>
+          <p class="eyebrow" id="theme-label">DOCK THEMES</p>
+          <p id="theme-description" class="theme-description" role="status">Graphite — Dark and translucent.</p>
+        </div>
+        <fieldset class="themes" aria-labelledby="theme-label" hidden>
+          <label><input type="radio" name="theme" value="graphite" checked><span><i></i>Graphite</span></label>
+          <label><input type="radio" name="theme" value="nocturne"><span><i></i>Nocturne</span></label>
+          <label><input type="radio" name="theme" value="lagoon"><span><i></i>Lagoon</span></label>
+          <label><input type="radio" name="theme" value="porcelain"><span><i></i>Porcelain</span></label>
+          <label><input type="radio" name="theme" value="orbit"><span><i></i>Orbit</span></label>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="widgets section" id="widgets" aria-labelledby="widgets-title">
+      <div class="section-head">
+        <div><p class="eyebrow">BUILT-IN WIDGETS</p><h2 id="widgets-title">At a glance.</h2></div>
+        <p>Check what’s next, how much time you have left, or what’s playing without switching apps.</p>
+      </div>
+      <div class="widget-grid">
+        <article class="widget"><svg aria-hidden="true"><use href="#calendar"/></svg><div><h3>Calendar</h3><p>Your next event.</p></div></article>
+        <article class="widget"><svg aria-hidden="true"><use href="#check"/></svg><div><h3>Reminders</h3><p>The next task on your list.</p></div></article>
+        <article class="widget"><svg aria-hidden="true"><use href="#sun"/></svg><div><h3>Weather</h3><p>Current temperature and conditions.</p></div></article>
+        <article class="widget"><svg aria-hidden="true"><use href="#music"/></svg><div><h3>Spotify &amp; Apple Music</h3><p>See what’s playing and control either player from the Dock.</p></div></article>
+        <article class="widget"><svg aria-hidden="true"><use href="#timer"/></svg><div><h3>Pomodoro</h3><p>Set your own focus and break times, with sound or on-screen alerts.</p></div></article>
+        <article class="widget"><svg aria-hidden="true"><use href="#pulse"/></svg><div><h3>Activity</h3><p>CPU, memory, and network activity.</p></div></article>
+      </div>
+    </section>
+
+    <section class="install section" id="get-dock" aria-labelledby="install-title">
+      <div><p class="eyebrow">MADE FOR MAC</p><h2 id="install-title">A Dock for every display.</h2><p>Put it at the bottom, left, or right. Set the theme, size, and position for each display. Turn on auto-hide to bring it back with a move to the screen edge.</p></div>
+      <div class="install-card">
+        <h3>Get Dock</h3>
+        <p class="requirements">Apple silicon · macOS 15 or later</p>
+        <a class="button" href="downloads/Dock-for-Mac.dmg" download>Download for Mac <span aria-hidden="true">↓</span></a>
+        <ol>
+          <li>Open the disk image and drag <strong>Dock Replacement</strong> into <strong>Applications</strong>.</li>
+          <li>Open the app and choose your widgets in the setup assistant.</li>
+          <li>Pick a theme in <strong>Settings → Appearance</strong> from the Dock menu bar icon.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer class="footer wrap"><span>Dock<span class="accent">.</span></span><a href="#">Back to top ↑</a></footer>
+</body>
+</html>
