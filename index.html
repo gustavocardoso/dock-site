@@ -186,6 +186,11 @@
         <p>Search your clipboard history, pin important items, and copy them again. Capture is off until you enable it and can be paused at any time.</p>
         <p>Create and search multiple notes, add basic formatting or paste images. Notes save automatically.</p>
         <p class="feature-detail">Both widgets are available in builds from source, not yet in the website download. Their data is encrypted locally with a Keychain key. Clipboard capture can save passwords and other sensitive content.</p>
+        <div class="keychain-note">
+          <h3>Why does macOS ask for Keychain access?</h3>
+          <p>Dock uses a key in your Mac’s Keychain to encrypt and open your clipboard history and notes. macOS may ask you to unlock your Keychain or allow access, including after a new locally signed build.</p>
+          <p>If access is denied, the widgets cannot open or save their private data. Unlock the Keychain and retry in the widget. If the encryption key is lost, the saved data cannot be recovered.</p>
+        </div>
       </div>
       <div class="feature-art private-art" role="img" aria-label="Illustrations of a searchable clipboard history and a formatted note">
         <span class="art-label">THE LITTLE THINGS YOU WANT TO KEEP</span>
