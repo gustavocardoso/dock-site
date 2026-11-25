@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#191321">
-  <meta name="description" content="Make the macOS Dock your own with Apple Music and Spotify widgets, a customizable Pomodoro, five themes, and settings for each display.">
+  <meta name="description" content="Make the macOS Dock your own with music, Pomodoro, clipboard and notes widgets, five themes, and settings for each display.">
   <title>Dock — A more personal Dock for Mac</title>
   <link rel="icon" href="dock.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -25,6 +25,8 @@
     <symbol id="home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8M6 9v11h12V9m-8 11v-6h4v6"/></symbol>
     <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v13m-4-4 4 4 4-4M5 20h14"/></symbol>
     <symbol id="trash" viewBox="0 0 24 24"><path d="M4 6h16M9 6V3h6v3m3 0-1 14H7L6 6m4 4v6m4-6v6"/></symbol>
+    <symbol id="clipboard" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 5V3h6v2M9 11h6m-6 4h6"/></symbol>
+    <symbol id="note" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
   </svg>
   <header class="top wrap">
     <a class="brand" href="#" aria-label="Dock home"><svg aria-hidden="true"><use href="#mark"/></svg> Dock<span>.</span></a>
@@ -128,6 +130,14 @@
           <div class="widget-stage" aria-hidden="true"><div class="mini-tile mini-music"><div class="mini-cover music-green"><svg><use href="#music"/></svg></div><div class="mini-track"><strong>Now playing</strong><small>Spotify</small><span class="mini-progress green"><i></i></span></div><span class="mini-controls">◂◂ &nbsp;Ⅱ &nbsp;▸▸</span></div></div>
           <div class="widget-copy"><h3>Spotify</h3><p>Keep your controls and track progress in the Dock.</p></div>
         </article>
+        <article class="widget">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile"><svg class="mini-icon sky"><use href="#clipboard"/></svg><div><strong>Clipboard</strong><small>Open</small></div></div></div>
+          <div class="widget-copy"><h3>Clipboard History</h3><p>Find and reuse things you copied. Available in source builds.</p></div>
+        </article>
+        <article class="widget">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile"><svg class="mini-icon amber"><use href="#note"/></svg><div><strong>Quick Notes</strong><small>Open</small></div></div></div>
+          <div class="widget-copy"><h3>Quick Notes</h3><p>Keep your notes close by. Available in source builds.</p></div>
+        </article>
         <article class="widget widget-pomodoro">
           <div class="widget-stage" aria-hidden="true"><div class="mini-tile"><span class="mini-ring"><span>18:42</span></span><div><strong class="amber-text">Focus</strong><small>Ⅱ &nbsp; ↺</small></div></div></div>
           <div class="widget-copy"><h3>Pomodoro</h3><p>A focus timer with a break when you need one.</p></div>
@@ -169,6 +179,34 @@
       </div>
     </section>
 
+    <section class="feature-section section" id="private-widgets" aria-labelledby="private-title">
+      <div class="feature-copy">
+        <p class="eyebrow">CLIPBOARD + QUICK NOTES</p>
+        <h2 id="private-title">Keep the useful<br><em>close at hand.</em></h2>
+        <p>Search your clipboard history, pin important items, and copy them again. Capture is off until you enable it and can be paused at any time.</p>
+        <p>Create and search multiple notes, add basic formatting or paste images. Notes save automatically.</p>
+        <p class="feature-detail">Both widgets are available in builds from source, not yet in the website download. Their data is encrypted locally with a Keychain key. Clipboard capture can save passwords and other sensitive content.</p>
+      </div>
+      <div class="feature-art private-art" role="img" aria-label="Illustrations of a searchable clipboard history and a formatted note">
+        <span class="art-label">THE LITTLE THINGS YOU WANT TO KEEP</span>
+        <div class="private-scenes" aria-hidden="true">
+          <div class="private-window clipboard-preview">
+            <div class="private-window-title"><span>Clipboard</span><span class="private-window-dots">● ● ●</span></div>
+            <div class="private-search">⌕ &nbsp; Search clipboard</div>
+            <div class="private-entry"><span>Project reference</span><small>Pinned</small></div>
+            <div class="private-entry"><span>Inspiration.png</span><small>Image</small></div>
+            <div class="private-entry"><span>Notes for Friday</span><small>Text</small></div>
+          </div>
+          <div class="private-window notes-preview">
+            <div class="private-window-title"><span>Quick Notes</span><span class="private-window-dots">● ● ●</span></div>
+            <div class="private-note-title">Ideas for next week</div>
+            <div class="private-note-body"><strong>Things to explore</strong><br>• A little more focus<br>• Make space for ideas</div>
+          </div>
+        </div>
+        <span class="art-footnote">ILLUSTRATIVE PREVIEW · SAMPLE DATA</span>
+      </div>
+    </section>
+
     <section class="details section" aria-labelledby="details-title">
       <div class="section-head">
         <div><p class="eyebrow">MADE FOR YOUR WORKSPACE</p><h2 id="details-title">A place for<br><em>everything.</em></h2></div>
@@ -187,6 +225,7 @@
         <h3>Get Dock</h3>
         <p class="requirements">Apple silicon · macOS 15 or later</p>
         <a class="button" href="downloads/Dock-for-Mac.dmg" download>Download for Mac <span aria-hidden="true">↓</span></a>
+        <p class="download-note">The current download does not yet include Clipboard History or Quick Notes.</p>
         <ol>
           <li>Open the disk image and drag <strong>Dock Replacement</strong> into <strong>Applications</strong>.</li>
           <li>Open the app and choose your widgets in the setup assistant.</li>
