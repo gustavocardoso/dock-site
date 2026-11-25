@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#191321">
-  <meta name="description" content="Make the macOS Dock your own with live widgets, five themes, and settings for each display.">
+  <meta name="description" content="Make the macOS Dock your own with Apple Music and Spotify widgets, a customizable Pomodoro, five themes, and settings for each display.">
   <title>Dock — A more personal Dock for Mac</title>
   <link rel="icon" href="dock.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -29,7 +29,7 @@
   <header class="top wrap">
     <a class="brand" href="#" aria-label="Dock home"><svg aria-hidden="true"><use href="#mark"/></svg> Dock<span>.</span></a>
     <nav aria-label="Main navigation">
-      <a href="#demo">Themes</a><a href="#widgets">Widgets</a><a class="nav-cta" href="#get-dock">Download <span aria-hidden="true">↓</span></a>
+      <a href="#demo">Themes</a><a href="#widgets">Widgets</a><a href="#focus">Focus</a><a class="nav-cta" href="#get-dock">Download <span aria-hidden="true">↓</span></a>
     </nav>
   </header>
   <main id="main" class="wrap">
@@ -77,7 +77,7 @@
           <span class="divider"></span>
           <div class="sample sample-weather"><svg aria-hidden="true"><use href="#sun"/></svg><div><small>WEATHER</small><strong>24°</strong></div></div>
           <div class="sample sample-calendar"><svg aria-hidden="true"><use href="#calendar"/></svg><div><small>CALENDAR</small><strong>Today, 2 PM</strong></div></div>
-          <div class="sample sample-timer"><svg aria-hidden="true"><use href="#timer"/></svg><div><small>TIMER</small><strong>18:42</strong></div></div>
+          <div class="sample sample-timer"><svg aria-hidden="true"><use href="#timer"/></svg><div><small>FOCUS</small><strong>18:42</strong></div></div>
           <span class="divider shortcuts"></span>
           <div class="shortcuts" aria-hidden="true"><svg><use href="#home"/></svg><svg><use href="#download"/></svg><svg><use href="#trash"/></svg></div>
         </div>
@@ -99,16 +99,85 @@
 
     <section class="widgets section" id="widgets" aria-labelledby="widgets-title">
       <div class="section-head">
-        <div><p class="eyebrow">BUILT-IN WIDGETS</p><h2 id="widgets-title">At a glance.</h2></div>
-        <p>Check what’s next, how much time you have left, or what’s playing without switching apps.</p>
+        <div><p class="eyebrow">BUILT-IN WIDGETS</p><h2 id="widgets-title">A little more<br><em>within reach.</em></h2></div>
+        <p>Pin the details you reach for throughout the day. Choose your widgets and their order for each display.</p>
       </div>
+      <p class="preview-note">ILLUSTRATIVE WIDGET PREVIEWS · SAMPLE DATA</p>
       <div class="widget-grid">
-        <article class="widget"><svg aria-hidden="true"><use href="#calendar"/></svg><div><h3>Calendar</h3><p>Your next event.</p></div></article>
-        <article class="widget"><svg aria-hidden="true"><use href="#check"/></svg><div><h3>Reminders</h3><p>The next task on your list.</p></div></article>
-        <article class="widget"><svg aria-hidden="true"><use href="#sun"/></svg><div><h3>Weather</h3><p>Current temperature and conditions.</p></div></article>
-        <article class="widget"><svg aria-hidden="true"><use href="#music"/></svg><div><h3>Spotify &amp; Apple Music</h3><p>See what’s playing and control either player from the Dock.</p></div></article>
-        <article class="widget"><svg aria-hidden="true"><use href="#timer"/></svg><div><h3>Pomodoro</h3><p>Set your own focus and break times, with sound or on-screen alerts.</p></div></article>
-        <article class="widget"><svg aria-hidden="true"><use href="#pulse"/></svg><div><h3>Activity</h3><p>CPU, memory, and network activity.</p></div></article>
+        <article class="widget">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile"><svg class="mini-icon coral"><use href="#calendar"/></svg><div><strong>Design review</strong><small>Today · 2:00 PM</small></div></div></div>
+          <div class="widget-copy"><h3>Calendar</h3><p>Your next event, right where you can see it.</p></div>
+        </article>
+        <article class="widget">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile"><svg class="mini-icon lilac"><use href="#check"/></svg><div><strong>Send the update</strong><small>Next reminder</small></div></div></div>
+          <div class="widget-copy"><h3>Reminders</h3><p>Keep the next task on your list in sight.</p></div>
+        </article>
+        <article class="widget">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile"><svg class="mini-icon amber"><use href="#sun"/></svg><div><strong class="mini-temperature">24°</strong><small>Partly cloudy</small></div></div></div>
+          <div class="widget-copy"><h3>Weather</h3><p>Current conditions for your location or chosen city.</p></div>
+        </article>
+        <article class="widget">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile mini-activity"><svg class="mini-icon mint"><use href="#pulse"/></svg><div class="mini-stats"><span>CPU <i><b style="width: 34%"></b></i></span><span>RAM <i><b style="width: 62%"></b></i></span><small>↓ 1.2 MB/s</small></div></div></div>
+          <div class="widget-copy"><h3>Activity</h3><p>See CPU, memory, and network activity.</p></div>
+        </article>
+        <article class="widget">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile mini-music"><div class="mini-cover music-pink"><svg><use href="#music"/></svg></div><div class="mini-track"><strong>Now playing</strong><small>Apple Music</small><span class="mini-progress"><i></i></span></div><span class="mini-controls">◂◂ &nbsp;Ⅱ &nbsp;▸▸</span></div></div>
+          <div class="widget-copy"><h3>Apple Music</h3><p>Your music, playback controls, and track progress.</p></div>
+        </article>
+        <article class="widget">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile mini-music"><div class="mini-cover music-green"><svg><use href="#music"/></svg></div><div class="mini-track"><strong>Now playing</strong><small>Spotify</small><span class="mini-progress green"><i></i></span></div><span class="mini-controls">◂◂ &nbsp;Ⅱ &nbsp;▸▸</span></div></div>
+          <div class="widget-copy"><h3>Spotify</h3><p>Keep your controls and track progress in the Dock.</p></div>
+        </article>
+        <article class="widget widget-pomodoro">
+          <div class="widget-stage" aria-hidden="true"><div class="mini-tile"><span class="mini-ring"><span>18:42</span></span><div><strong class="amber-text">Focus</strong><small>Ⅱ &nbsp; ↺</small></div></div></div>
+          <div class="widget-copy"><h3>Pomodoro</h3><p>A focus timer with a break when you need one.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="feature-section section" id="music" aria-labelledby="music-title">
+      <div class="feature-copy">
+        <p class="eyebrow">APPLE MUSIC + SPOTIFY</p>
+        <h2 id="music-title">Your soundtrack,<br><em>close by.</em></h2>
+        <p>Keep the music going without leaving your work. See the track and artist, play or pause, skip, and follow the progress of the song.</p>
+        <p class="feature-detail">Use either player or pin both. Artwork appears when available.</p>
+      </div>
+      <div class="feature-art music-art" role="img" aria-label="Illustration of the Apple Music and Spotify widgets with playback controls and progress bars">
+        <span class="art-label">NOW PLAYING / YOUR CHOICE</span>
+        <div class="music-stack" aria-hidden="true">
+          <div class="showcase-player apple-player"><div class="showcase-cover"><svg><use href="#music"/></svg></div><div class="showcase-track"><strong>Now playing</strong><span>Apple Music</span><div class="showcase-progress"><i></i></div></div><span class="showcase-controls">◂◂ &nbsp;Ⅱ &nbsp;▸▸</span></div>
+          <div class="showcase-player spotify-player"><div class="showcase-cover"><svg><use href="#music"/></svg></div><div class="showcase-track"><strong>Now playing</strong><span>Spotify</span><div class="showcase-progress"><i></i></div></div><span class="showcase-controls">◂◂ &nbsp;Ⅱ &nbsp;▸▸</span></div>
+        </div>
+        <span class="art-footnote">ILLUSTRATIVE PREVIEW</span>
+      </div>
+    </section>
+
+    <section class="feature-section feature-reverse section" id="focus" aria-labelledby="focus-title">
+      <div class="feature-copy">
+        <p class="eyebrow">POMODORO</p>
+        <h2 id="focus-title">Make room<br><em>to focus.</em></h2>
+        <p>Set your own focus and break lengths, then let the ring show how much time remains. Pause, resume, or reset whenever you need to.</p>
+        <p class="feature-detail">Choose a sound, an on-screen toast, both, or neither. The next session waits until you press play.</p>
+      </div>
+      <div class="feature-art focus-art" role="img" aria-label="Illustration of a Pomodoro focus timer and its configurable focus, break, and alert settings">
+        <span class="art-label">A RHYTHM THAT FITS YOU</span>
+        <div class="focus-scene" aria-hidden="true">
+          <div class="focus-ring"><span><strong>18:42</strong><small>FOCUS</small></span></div>
+          <div class="focus-settings"><span>YOUR POMODORO</span><p>Focus <b>25 min</b></p><p>Break <b>5 min</b></p><p>Alerts <b>Sound + toast</b></p></div>
+        </div>
+        <span class="art-footnote">ILLUSTRATIVE PREVIEW</span>
+      </div>
+    </section>
+
+    <section class="details section" aria-labelledby="details-title">
+      <div class="section-head">
+        <div><p class="eyebrow">MADE FOR YOUR WORKSPACE</p><h2 id="details-title">A place for<br><em>everything.</em></h2></div>
+        <p>Make the Dock feel at home on your screen, whether you use one display or several.</p>
+      </div>
+      <div class="detail-grid">
+        <article><span class="detail-mark">↔</span><h3>Your screen, your rules</h3><p>Choose the position, size, colors, theme, apps, and widgets for each display.</p></article>
+        <article><span class="detail-mark">↗</span><h3>There when you need it</h3><p>Auto-hide keeps the Dock out of the way until your pointer reaches the screen edge.</p></article>
+        <article><span class="detail-mark">✳</span><h3>A little more movement</h3><p>App icons magnify as you move across them. Reduced Motion is respected.</p></article>
       </div>
     </section>
 
